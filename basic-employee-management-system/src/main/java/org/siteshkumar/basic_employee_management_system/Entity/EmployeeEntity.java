@@ -1,10 +1,7 @@
 package org.siteshkumar.basic_employee_management_system.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
@@ -14,10 +11,16 @@ public class EmployeeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
+    @NotBlank(message = "first name is required")
     private String firstName;
+
+    @NotBlank(message = "last name is required")
     private String lastName;
+
+    @NotBlank(message = "email id is required")
     private String emailId;
+    
     private String phone;
 }
