@@ -1,0 +1,22 @@
+<div class="ms-5 me-5 text-success">
+    <h2>Employee List</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Id</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let emp of employees">
+                <td class="text-danger">{{emp.firstName}}</td>
+                <td class="text-danger">{{emp.lastName}}</td>
+                <td class="text-danger">{{emp.emailId}}</td>
+                <td class="text-danger">{{emp.phone}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
