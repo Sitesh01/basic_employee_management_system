@@ -59,6 +59,8 @@ public class EmployeeServiceImp implements EmployeeService{
     public String updateEmployee(Long id, EmployeeModel employee) {
         EmployeeEntity empEntity = empRep.findById(id).get();
 
+        empEntity.setFirstName(employee.getFirstName());
+        empEntity.setLastName(employee.getLastName());
         empEntity.setEmailId(employee.getEmailId());
         empEntity.setPhone(employee.getPhone());
 
