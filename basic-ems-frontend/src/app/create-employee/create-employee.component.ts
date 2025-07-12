@@ -22,6 +22,7 @@ export class CreateEmployeeComponent {
     next: (response: string) => {
       if (response === "Saved Successfully !") {
         alert("Employee data saved Successfully");
+        window.location.reload();
       } else {
         alert("There is some error while saving data");
       }
