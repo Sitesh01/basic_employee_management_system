@@ -23,6 +23,14 @@ export class UpdateEmployeeComponent {
   }
 
   onSubmit() {
-
+    this.ems.updateEmployee(this.id, this.employee).subscribe({
+      next: (response: string) => {
+        if (response === "Updated Successfully !") {
+          alert("Employee data updated Successfully");
+        } else {
+          alert("There is some error while updating data");
+        }
+      }
+    });
   }
 }

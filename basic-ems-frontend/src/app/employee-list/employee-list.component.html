@@ -17,9 +17,11 @@
                 <td class="text-danger">{{emp.lastName}}</td>
                 <td class="text-danger">{{emp.emailId}}</td>
                 <td class="text-danger">{{emp.phone}}</td>
-                <button (click) = "updateEmployee(emp.id)" class="btn btn-success">Details</button>
-                <button (click) = "updateEmployee(emp.id)" class="btn btn-success">Update</button>
-                <button (click) = "updateEmployee(emp.id)" class="btn btn-success">Delete</button>
+                <td>
+                    <button (click) = "employeeDetails(emp.id)" class="btn btn-warning">Details</button>
+                    <button (click) = "updateEmployee(emp.id)" class="btn btn-success" style="margin-left: 10px;">Update</button>
+                    <button (click) = "deleteEmployee(emp.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                </td>
             </tr>
         </tbody>
     </table>

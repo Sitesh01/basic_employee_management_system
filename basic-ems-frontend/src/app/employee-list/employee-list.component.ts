@@ -27,4 +27,22 @@ export class EmployeeListComponent implements OnInit {
    updateEmployee(id : number){
     this.router.navigate(['update-employee', id ]);
   }
+
+  deleteEmployee(id: number){
+    this.ems.deleteEmployee(id).subscribe ({
+      next: (response : boolean) => {
+        if (response) {
+          alert("Employee data is deleted successfully");
+          this.router.navigate(['employee', id ]);
+          this.getEmployees();
+        } else {
+          alert("Employee data not deleted");
+        }
+      }
+    }
+  )}
+
+  employeeDetails(id: number){
+    this.router.navigate(['employee-details', id ]);
+  }
 }
